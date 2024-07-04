@@ -7,34 +7,53 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-black1">
     <!--header-->
-    <header class="w-[80%] mx-auto">
-      <!--navber-->
-      <nav class="flex items-center py-4 justify-between">
-        <a href="#" class="flex items-center gap-2">
-          <i class="ri-movie-2-line font-bold text-6xl"></i>
-          <p>
-            <span class="font-bold text-3xl">StarLight</span> <br />
-            <span class="text-base font-semibold">Cineplex</span>
-          </p>
-        </a>
-        <ul class="text-base font-semibold flex gap-5">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Ticket Price</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Offering</a></li>
-        </ul>
-        <div class="flex gap-5 items-center">
-          <i class="ri-search-line text-base font-bold"></i>
-          <button class="p-3 bg-violet-950 text-base text-white">Sign In</button>
-        </div>
-      </nav>
+    <header class="mx-auto">
+      <section class="bg-black3">
+        <!--navber-->
+        <nav class="flex items-center py-4 justify-between w-[80%] mx-auto mb-10">
+          <a href="#" class="flex items-center gap-2">
+            <i class="ri-star-half-fill font-bold text-6xl bg-gradient-to-r from-amber-300 to-yellow-600 bg-clip-text text-transparent"></i>
+
+            <p>
+              <span class="font-bold text-3xl text-primary">STARLIGHT</span> <br />
+              <span class="ml-20 text-base font-semibold text-right text-white">CINEPLEX</span>
+            </p>
+          </a>
+          <ul class="text-base flex gap-8 text-white custom-bg" id="nav-menu">
+            <li><a href="/src/index.html" class="hover:text-secondary">Home</a></li>
+            <!-- <li><a href="./page/about.html" class="hover:text-secondary">About us</a></li> -->
+            <li><a href="./page/about.html" class="hover:text-secondary">About us</a></li>
+            <li><a href="./page/ticketPrice.html" class="hover:text-secondary">Ticket Price</a></li>
+            <li><a href="./page/contact.html" class="hover:text-secondary">Contact</a></li>
+            <li><a href="./page/offering.html" class="hover:text-secondary">Offering</a></li>
+          </ul>
+          <div class="flex gap-5 items-center text-white">
+            <i class="ri-search-line text-base font-bold"></i>
+            <button class="p-2 bg-gradient-to-r from-secondary to-primary text-base text-black rounded-md">Sign In</button>
+          </div>
+        </nav>
+      </section>
+
       <!--Banner-->
-      <section>
-        <h2>Banner</h2>
+      <section class="w-[80%] mx-auto">
+        <div class="relative w-[100%] mx-auto">
+          <div id="slider" class="overflow-hidden relative">
+            <div class="flex transition-transform duration-500 h-[550px] overflow-hidden rounded-md" id="image-container">
+              <img src="/Assets/indor.jpg" alt="Image 1" class="w-full h-auto flex-shrink-0" />
+              <img src="/Assets/outdoor.jpg" alt="Image 2" class="w-full h-auto object-cover flex-shrink-0" />
+              <img src="/Assets/special seat.jpg" alt="Image 3" class="w-full h-auto object-cover flex-shrink-0" />
+              <img src="/Assets/seat.jpg" alt="Image 4" class="w-full h-auto object-cover flex-shrink-0" />
+            </div>
+          </div>
+
+          <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white px-4 py-2">Prev</button>
+          <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white px-4 py-2">Next</button>
+        </div>
       </section>
     </header>
+    <script src="script.js">
+    </script>
   </body>
 </html>
